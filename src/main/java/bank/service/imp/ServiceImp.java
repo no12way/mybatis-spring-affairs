@@ -5,8 +5,9 @@ import bank.pojo.Account;
 import bank.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.swing.*;
 import java.util.List;
 
 @org.springframework.stereotype.Service
@@ -15,7 +16,10 @@ public class ServiceImp implements Service {
     @Qualifier("accountMapper")
     private AccountMapper accountMapper;
     @Override
+    @Transactional(propagation = Propagation.NESTED)
     public void save(Account account) {
+        Integer i = null;
+        i.toString();
         accountMapper.insert(account);
     }
 

@@ -8,7 +8,7 @@ public class TestTran {
     @Test
     public void testS(){
         ApplicationContext app = new ClassPathXmlApplicationContext("spring.xml");
-        Service service = (ServiceImp)app.getBean("serviceImp");
+        Service service = (Service)app.getBean("serviceImp");
         service.select("jack");
     }
 }

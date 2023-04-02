@@ -31,8 +31,6 @@
 
     <!--Mapper扫描-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-<!--        &lt;!&ndash; 指定SqlSessionFactory对象的名称 &ndash;&gt;-->
-<!--        <property name="sqlSessionFactoryBeanName" value="factory"/>-->
         <!-- 指定基本包，dao接口所在的包名 -->
         <property name="basePackage" value="bank.dao"/>
     </bean>
